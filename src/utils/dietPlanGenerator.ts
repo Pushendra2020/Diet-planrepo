@@ -29,285 +29,285 @@ interface MealPlan {
   };
 }
 
-// These are mock meal options for different diet types
+// These are mock meal options with Indian cuisine focus
 const mealOptions = {
   vegetarian: {
     breakfast: [
       {
-        name: "Greek Yogurt Parfait",
-        foods: ["1 cup Greek yogurt", "1/2 cup mixed berries", "1/4 cup granola", "1 tbsp honey"],
-        nutrients: { calories: 340, protein: 24, carbs: 48, fat: 8 }
+        name: "Masala Dosa with Chutney",
+        foods: ["1 masala dosa", "2 tbsp coconut chutney", "1/4 cup sambar", "1 cup masala tea"],
+        nutrients: { calories: 320, protein: 10, carbs: 50, fat: 9 }
       },
       {
-        name: "Avocado Toast",
-        foods: ["2 slices whole grain bread", "1 ripe avocado", "2 eggs (scrambled)", "Cherry tomatoes", "Salt and pepper to taste"],
-        nutrients: { calories: 450, protein: 20, carbs: 40, fat: 25 }
+        name: "Paneer Paratha",
+        foods: ["2 paneer parathas", "1/2 cup curd/yogurt", "1 tbsp pickle", "1 cup masala chai"],
+        nutrients: { calories: 450, protein: 18, carbs: 48, fat: 22 }
       },
       {
-        name: "Protein Smoothie Bowl",
-        foods: ["1 scoop plant protein", "1 banana", "1/2 cup almond milk", "1 tbsp almond butter", "Topped with granola and fruit"],
-        nutrients: { calories: 380, protein: 25, carbs: 50, fat: 10 }
+        name: "Poha with Vegetables",
+        foods: ["1 cup poha", "1/4 cup mixed vegetables", "1 tbsp peanuts", "1 cup green tea"],
+        nutrients: { calories: 280, protein: 8, carbs: 42, fat: 8 }
       }
     ],
     lunch: [
       {
-        name: "Mediterranean Salad",
-        foods: ["2 cups mixed greens", "1/2 cup chickpeas", "1/4 cup feta cheese", "10 kalamata olives", "1 tbsp olive oil and lemon dressing"],
-        nutrients: { calories: 380, protein: 15, carbs: 25, fat: 24 }
+        name: "Rajma Chawal",
+        foods: ["1 cup rajma curry", "1 cup steamed rice", "1 cup vegetable salad", "1/2 cup curd/yogurt"],
+        nutrients: { calories: 420, protein: 16, carbs: 65, fat: 8 }
       },
       {
-        name: "Lentil Soup with Bread",
-        foods: ["1.5 cups lentil soup", "1 slice whole grain bread", "1 tbsp butter", "Side of mixed greens"],
-        nutrients: { calories: 400, protein: 18, carbs: 48, fat: 15 }
+        name: "Chole Bhature",
+        foods: ["1 cup chole/chickpea curry", "2 bhaturas", "1/2 cup onion salad", "1 glass buttermilk"],
+        nutrients: { calories: 550, protein: 18, carbs: 70, fat: 22 }
       },
       {
-        name: "Veggie Wrap",
-        foods: ["Whole grain wrap", "2 tbsp hummus", "Roasted vegetables", "1/4 cup feta cheese", "Spinach"],
-        nutrients: { calories: 390, protein: 14, carbs: 45, fat: 18 }
+        name: "Dal Khichdi",
+        foods: ["1.5 cup dal khichdi", "1 tbsp ghee", "1 cup raita", "1 papad"],
+        nutrients: { calories: 380, protein: 15, carbs: 55, fat: 10 }
       }
     ],
     dinner: [
       {
-        name: "Stir-Fried Tofu",
-        foods: ["6oz firm tofu", "2 cups mixed vegetables", "1/2 cup brown rice", "2 tbsp stir-fry sauce"],
-        nutrients: { calories: 420, protein: 22, carbs: 50, fat: 14 }
+        name: "Paneer Butter Masala with Roti",
+        foods: ["1 cup paneer butter masala", "3 rotis", "1/2 cup cucumber salad", "1/2 cup jeera rice"],
+        nutrients: { calories: 450, protein: 20, carbs: 45, fat: 22 }
       },
       {
-        name: "Stuffed Bell Peppers",
-        foods: ["2 bell peppers", "1 cup quinoa", "1/2 cup black beans", "1/4 cup cheese", "Salsa"],
-        nutrients: { calories: 430, protein: 18, carbs: 55, fat: 12 }
+        name: "Veg Biryani",
+        foods: ["1.5 cups vegetable biryani", "1/2 cup raita", "1 papad", "1 cup masala chaas"],
+        nutrients: { calories: 420, protein: 13, carbs: 60, fat: 14 }
       },
       {
-        name: "Eggplant Parmesan",
-        foods: ["1 medium eggplant", "1/4 cup parmesan", "1/2 cup tomato sauce", "Side of whole wheat pasta"],
-        nutrients: { calories: 450, protein: 16, carbs: 58, fat: 15 }
+        name: "Aloo Gobi with Dal and Rice",
+        foods: ["1 cup aloo gobi sabzi", "1/2 cup dal tadka", "1 cup steamed rice", "1 cup vegetable salad"],
+        nutrients: { calories: 440, protein: 14, carbs: 70, fat: 10 }
       }
     ],
     snack: [
       {
-        name: "Protein Snack",
-        foods: ["1 apple", "2 tbsp almond butter"],
-        nutrients: { calories: 180, protein: 5, carbs: 20, fat: 10 }
+        name: "Masala Chai with Samosa",
+        foods: ["1 cup masala chai", "1 samosa", "Green chutney"],
+        nutrients: { calories: 240, protein: 5, carbs: 32, fat: 12 }
       },
       {
-        name: "Yogurt Parfait",
-        foods: ["3/4 cup Greek yogurt", "1 tbsp honey", "1/4 cup berries"],
-        nutrients: { calories: 160, protein: 15, carbs: 18, fat: 2 }
+        name: "Dhokla",
+        foods: ["2 pieces khaman dhokla", "Green chutney", "1 cup lemon water"],
+        nutrients: { calories: 180, protein: 8, carbs: 24, fat: 6 }
       },
       {
-        name: "Trail Mix",
-        foods: ["1/4 cup mixed nuts", "2 tbsp dried fruit", "1 tbsp dark chocolate chips"],
-        nutrients: { calories: 210, protein: 6, carbs: 15, fat: 14 }
+        name: "Roasted Chana",
+        foods: ["1/2 cup roasted chana", "1 cup masala chai", "Few curry leaves"],
+        nutrients: { calories: 190, protein: 9, carbs: 22, fat: 8 }
       }
     ]
   },
   vegan: {
     breakfast: [
       {
-        name: "Tofu Scramble",
-        foods: ["6oz firm tofu", "1/2 cup mixed vegetables", "1 slice whole grain toast", "1 tbsp nutritional yeast"],
-        nutrients: { calories: 320, protein: 22, carbs: 30, fat: 12 }
+        name: "Idli with Sambar",
+        foods: ["3 idlis", "1/2 cup sambar", "2 tbsp coconut chutney", "1 cup herbal tea"],
+        nutrients: { calories: 290, protein: 8, carbs: 54, fat: 4 }
       },
       {
-        name: "Açai Bowl",
-        foods: ["1 açai packet", "1 banana", "1/2 cup mixed berries", "2 tbsp almond butter", "1/4 cup granola"],
-        nutrients: { calories: 420, protein: 10, carbs: 65, fat: 15 }
+        name: "Upma",
+        foods: ["1 cup semolina upma", "1/4 cup mixed vegetables", "1 tbsp peanuts", "1 cup lemon water"],
+        nutrients: { calories: 310, protein: 9, carbs: 52, fat: 7 }
       },
       {
-        name: "Overnight Chia Pudding",
-        foods: ["1/4 cup chia seeds", "1 cup almond milk", "1 tbsp maple syrup", "Topped with fruits and nuts"],
-        nutrients: { calories: 350, protein: 12, carbs: 40, fat: 18 }
+        name: "Vegan Uttapam",
+        foods: ["2 uttapams", "1/4 cup coconut chutney", "1/4 cup tomato chutney", "1 cup green tea"],
+        nutrients: { calories: 340, protein: 10, carbs: 58, fat: 8 }
       }
     ],
     lunch: [
       {
-        name: "Buddha Bowl",
-        foods: ["1/2 cup quinoa", "1/2 cup roasted chickpeas", "1 cup roasted vegetables", "2 tbsp tahini dressing"],
-        nutrients: { calories: 400, protein: 15, carbs: 55, fat: 14 }
+        name: "Dal Tadka with Rice",
+        foods: ["1 cup dal tadka", "1 cup steamed rice", "1 cup mixed vegetable salad", "1 roasted papad"],
+        nutrients: { calories: 390, protein: 16, carbs: 70, fat: 6 }
       },
       {
-        name: "Lentil Salad",
-        foods: ["1 cup cooked lentils", "1 cup mixed greens", "1/4 cup diced vegetables", "2 tbsp vinaigrette"],
-        nutrients: { calories: 350, protein: 18, carbs: 40, fat: 12 }
+        name: "Chana Masala with Roti",
+        foods: ["1 cup chana masala", "3 rotis", "1/2 cup onion salad", "1 glass jaljeera"],
+        nutrients: { calories: 420, protein: 18, carbs: 65, fat: 10 }
       },
       {
-        name: "Hummus Wrap",
-        foods: ["Whole grain wrap", "1/4 cup hummus", "Sliced cucumbers", "Tomatoes", "Spinach"],
-        nutrients: { calories: 380, protein: 12, carbs: 50, fat: 15 }
+        name: "Vegan Pav Bhaji",
+        foods: ["1.5 cups bhaji (no butter)", "2 pavs", "1/4 cup chopped onion", "Lemon wedges"],
+        nutrients: { calories: 410, protein: 12, carbs: 75, fat: 8 }
       }
     ],
     dinner: [
       {
-        name: "Chickpea Curry",
-        foods: ["1 cup chickpeas", "1 cup mixed vegetables", "Curry sauce", "1/2 cup brown rice"],
-        nutrients: { calories: 450, protein: 16, carbs: 65, fat: 12 }
+        name: "Mixed Vegetable Curry with Roti",
+        foods: ["1 cup mixed vegetable curry", "3 rotis", "1 cup cucumber salad", "1 glass lemon water"],
+        nutrients: { calories: 390, protein: 12, carbs: 68, fat: 9 }
       },
       {
-        name: "Stuffed Sweet Potato",
-        foods: ["1 large sweet potato", "1/2 cup black beans", "1/4 cup corn", "2 tbsp vegan cheese", "Cilantro"],
-        nutrients: { calories: 420, protein: 14, carbs: 70, fat: 8 }
+        name: "Masoor Dal with Jeera Rice",
+        foods: ["1 cup masoor dal", "1 cup jeera rice", "1 cup vegetable salad", "1 roasted papad"],
+        nutrients: { calories: 410, protein: 18, carbs: 72, fat: 5 }
       },
       {
-        name: "Vegan Pasta",
-        foods: ["1.5 cups whole wheat pasta", "1/2 cup tomato sauce", "1 cup sauteed vegetables", "2 tbsp nutritional yeast"],
-        nutrients: { calories: 440, protein: 18, carbs: 75, fat: 6 }
+        name: "Aloo Methi with Ragi Roti",
+        foods: ["1 cup aloo methi", "2 ragi rotis", "1/2 cup sliced cucumber", "1 glass buttermilk (plant-based)"],
+        nutrients: { calories: 370, protein: 10, carbs: 65, fat: 8 }
       }
     ],
     snack: [
       {
-        name: "Fruit Plate",
-        foods: ["1 apple", "10 almonds"],
-        nutrients: { calories: 160, protein: 4, carbs: 20, fat: 8 }
+        name: "Roasted Makhana",
+        foods: ["1/2 cup roasted makhana (fox nuts)", "1 cup herbal tea"],
+        nutrients: { calories: 150, protein: 4, carbs: 24, fat: 4 }
       },
       {
-        name: "Energy Balls",
-        foods: ["2 date and nut energy balls"],
-        nutrients: { calories: 150, protein: 5, carbs: 18, fat: 7 }
+        name: "Fruit Chaat",
+        foods: ["1 cup mixed fruit chaat", "1 tsp chaat masala", "Few mint leaves"],
+        nutrients: { calories: 120, protein: 2, carbs: 28, fat: 1 }
       },
       {
-        name: "Roasted Chickpeas",
-        foods: ["1/2 cup roasted chickpeas", "Spices"],
-        nutrients: { calories: 130, protein: 7, carbs: 22, fat: 2 }
+        name: "Bhel Puri",
+        foods: ["1 cup bhel puri", "1 glass nimbu pani (lemon water)"],
+        nutrients: { calories: 220, protein: 6, carbs: 38, fat: 6 }
       }
     ]
   },
   "non-vegetarian": {
     breakfast: [
       {
-        name: "Protein Omelette",
-        foods: ["3 eggs", "1/4 cup cheese", "Mixed vegetables", "1 slice whole grain toast"],
-        nutrients: { calories: 420, protein: 28, carbs: 20, fat: 25 }
+        name: "Keema Paratha",
+        foods: ["2 keema parathas", "1/2 cup curd/yogurt", "1 tbsp pickle", "1 cup masala chai"],
+        nutrients: { calories: 480, protein: 24, carbs: 42, fat: 26 }
       },
       {
-        name: "Breakfast Burrito",
-        foods: ["2 scrambled eggs", "2 oz grilled chicken", "1/4 cup black beans", "Whole grain wrap", "Salsa"],
-        nutrients: { calories: 480, protein: 35, carbs: 40, fat: 18 }
+        name: "Egg Bhurji with Paratha",
+        foods: ["2 eggs bhurji", "2 plain parathas", "1/4 cup mint chutney", "1 cup masala chai"],
+        nutrients: { calories: 460, protein: 22, carbs: 38, fat: 24 }
       },
       {
-        name: "Protein Pancakes",
-        foods: ["Protein pancake mix", "1 scoop protein powder", "1/4 cup Greek yogurt", "1/4 cup berries"],
-        nutrients: { calories: 380, protein: 30, carbs: 42, fat: 8 }
+        name: "Chicken Sandwich",
+        foods: ["1 chicken tikka sandwich", "1/4 cup mint chutney", "1 cup masala chai"],
+        nutrients: { calories: 390, protein: 28, carbs: 30, fat: 16 }
       }
     ],
     lunch: [
       {
-        name: "Grilled Chicken Salad",
-        foods: ["5oz grilled chicken breast", "2 cups mixed greens", "1/4 cup cherry tomatoes", "1/4 cup cucumber", "2 tbsp vinaigrette"],
-        nutrients: { calories: 400, protein: 40, carbs: 12, fat: 20 }
+        name: "Chicken Biryani",
+        foods: ["1.5 cups chicken biryani", "1/2 cup raita", "1 papad", "1/4 cup onion salad"],
+        nutrients: { calories: 520, protein: 30, carbs: 58, fat: 18 }
       },
       {
-        name: "Turkey Wrap",
-        foods: ["4oz turkey breast", "Whole grain wrap", "Lettuce", "Tomato", "1 tbsp mayo", "1 oz cheese"],
-        nutrients: { calories: 420, protein: 35, carbs: 30, fat: 18 }
+        name: "Fish Curry with Rice",
+        foods: ["1 cup fish curry", "1 cup steamed rice", "1/2 cup cucumber salad", "1 glass buttermilk"],
+        nutrients: { calories: 450, protein: 32, carbs: 50, fat: 12 }
       },
       {
-        name: "Tuna Salad Sandwich",
-        foods: ["4oz tuna (canned in water)", "1 tbsp light mayo", "2 slices whole grain bread", "Lettuce", "Side of carrot sticks"],
-        nutrients: { calories: 390, protein: 30, carbs: 35, fat: 12 }
+        name: "Mutton Curry with Roti",
+        foods: ["1 cup mutton curry", "3 rotis", "1/2 cup onion salad", "1 roasted papad"],
+        nutrients: { calories: 510, protein: 35, carbs: 45, fat: 22 }
       }
     ],
     dinner: [
       {
-        name: "Grilled Salmon",
-        foods: ["5oz grilled salmon", "1 cup steamed vegetables", "1/2 cup brown rice", "Lemon dill sauce"],
-        nutrients: { calories: 450, protein: 35, carbs: 40, fat: 15 }
+        name: "Tandoori Chicken with Naan",
+        foods: ["2 pieces tandoori chicken", "2 butter naan", "1/4 cup mint chutney", "1/2 cup onion salad"],
+        nutrients: { calories: 580, protein: 40, carbs: 46, fat: 24 }
       },
       {
-        name: "Lean Beef Stir Fry",
-        foods: ["4oz lean beef strips", "2 cups mixed vegetables", "1/2 cup brown rice", "2 tbsp stir-fry sauce"],
-        nutrients: { calories: 470, protein: 38, carbs: 45, fat: 14 }
+        name: "Egg Curry with Rice",
+        foods: ["2 egg curry", "1 cup steamed rice", "1 cup vegetable salad", "1 papad"],
+        nutrients: { calories: 460, protein: 24, carbs: 58, fat: 16 }
       },
       {
-        name: "Baked Chicken",
-        foods: ["6oz chicken breast", "1 medium sweet potato", "1 cup roasted vegetables", "1 tbsp olive oil"],
-        nutrients: { calories: 460, protein: 42, carbs: 38, fat: 12 }
+        name: "Butter Chicken with Roti",
+        foods: ["1 cup butter chicken", "3 rotis", "1/2 cup cucumber raita", "1/4 cup onion salad"],
+        nutrients: { calories: 550, protein: 38, carbs: 42, fat: 26 }
       }
     ],
     snack: [
       {
-        name: "Protein Shake",
-        foods: ["1 scoop protein powder", "1 cup almond milk", "1/2 banana"],
-        nutrients: { calories: 180, protein: 20, carbs: 15, fat: 3 }
+        name: "Chicken Tikka",
+        foods: ["4 pieces chicken tikka", "1/4 cup mint chutney", "1 cup masala chai"],
+        nutrients: { calories: 240, protein: 28, carbs: 4, fat: 12 }
       },
       {
-        name: "Greek Yogurt",
-        foods: ["1 cup Greek yogurt", "1 tbsp honey", "1/4 cup berries"],
-        nutrients: { calories: 200, protein: 22, carbs: 20, fat: 2 }
+        name: "Egg Pakora",
+        foods: ["4 egg pakoras", "Green chutney", "1 cup masala chai"],
+        nutrients: { calories: 280, protein: 16, carbs: 18, fat: 16 }
       },
       {
-        name: "Beef Jerky with Nuts",
-        foods: ["1oz beef jerky", "15 almonds"],
-        nutrients: { calories: 190, protein: 15, carbs: 5, fat: 12 }
+        name: "Chicken Cutlet",
+        foods: ["2 chicken cutlets", "1/4 cup tomato ketchup", "1 glass nimbu pani"],
+        nutrients: { calories: 320, protein: 22, carbs: 24, fat: 14 }
       }
     ]
   },
   pescatarian: {
     breakfast: [
       {
-        name: "Smoked Salmon Bagel",
-        foods: ["1 whole grain bagel", "2oz smoked salmon", "1 tbsp cream cheese", "Capers", "Red onion"],
-        nutrients: { calories: 380, protein: 22, carbs: 45, fat: 12 }
+        name: "Fish Kheema with Paratha",
+        foods: ["1/2 cup fish kheema", "2 plain parathas", "1/2 cup curd/yogurt", "1 cup masala chai"],
+        nutrients: { calories: 420, protein: 26, carbs: 40, fat: 18 }
       },
       {
-        name: "Greek Yogurt Bowl",
-        foods: ["1 cup Greek yogurt", "1/4 cup granola", "1/2 cup mixed berries", "1 tbsp honey"],
-        nutrients: { calories: 340, protein: 24, carbs: 48, fat: 8 }
+        name: "Poha with Prawns",
+        foods: ["1 cup poha", "1/4 cup cooked prawns", "1 tbsp peanuts", "1 cup green tea"],
+        nutrients: { calories: 340, protein: 18, carbs: 40, fat: 10 }
       },
       {
-        name: "Spinach and Feta Omelette",
-        foods: ["3 eggs", "1 cup spinach", "1/4 cup feta cheese", "1 slice whole grain toast"],
-        nutrients: { calories: 400, protein: 26, carbs: 18, fat: 24 }
+        name: "Idli with Fish Sambar",
+        foods: ["3 idlis", "1/2 cup fish sambar", "2 tbsp coconut chutney", "1 cup herbal tea"],
+        nutrients: { calories: 350, protein: 20, carbs: 48, fat: 6 }
       }
     ],
     lunch: [
       {
-        name: "Tuna Salad",
-        foods: ["4oz tuna (canned in water)", "2 cups mixed greens", "1/4 cup chickpeas", "10 cherry tomatoes", "2 tbsp olive oil dressing"],
-        nutrients: { calories: 380, protein: 35, carbs: 20, fat: 16 }
+        name: "Fish Curry with Rice",
+        foods: ["1 cup fish curry", "1 cup steamed rice", "1/2 cup cucumber salad", "1 glass buttermilk"],
+        nutrients: { calories: 450, protein: 32, carbs: 50, fat: 12 }
       },
       {
-        name: "Salmon Poke Bowl",
-        foods: ["4oz raw salmon", "1/2 cup brown rice", "1/4 avocado", "1/4 cup cucumber", "Seaweed", "Soy sauce"],
-        nutrients: { calories: 420, protein: 30, carbs: 40, fat: 14 }
+        name: "Prawn Biryani",
+        foods: ["1.5 cups prawn biryani", "1/2 cup raita", "1 papad", "1/4 cup onion salad"],
+        nutrients: { calories: 480, protein: 28, carbs: 60, fat: 14 }
       },
       {
-        name: "Shrimp Tacos",
-        foods: ["4oz grilled shrimp", "2 corn tortillas", "1/4 cup cabbage slaw", "2 tbsp salsa", "Lime"],
-        nutrients: { calories: 350, protein: 28, carbs: 38, fat: 8 }
+        name: "Fish Thali",
+        foods: ["1 fried fish piece", "1/2 cup dal", "1 cup rice", "1/2 cup vegetable sabzi", "1 papad"],
+        nutrients: { calories: 520, protein: 30, carbs: 65, fat: 16 }
       }
     ],
     dinner: [
       {
-        name: "Baked Cod",
-        foods: ["5oz baked cod", "1 cup roasted vegetables", "1/2 cup quinoa", "Lemon herb sauce"],
-        nutrients: { calories: 420, protein: 35, carbs: 38, fat: 10 }
+        name: "Grilled Fish with Lemon Rice",
+        foods: ["1 piece grilled fish", "1 cup lemon rice", "1/2 cup cucumber raita", "1 papad"],
+        nutrients: { calories: 420, protein: 28, carbs: 48, fat: 12 }
       },
       {
-        name: "Grilled Shrimp Skewers",
-        foods: ["6oz grilled shrimp", "1 cup grilled vegetables", "1/2 cup brown rice", "1 tbsp olive oil"],
-        nutrients: { calories: 400, protein: 36, carbs: 35, fat: 12 }
+        name: "Fish Tikka with Roti",
+        foods: ["6 pieces fish tikka", "2 rotis", "1/4 cup mint chutney", "1/2 cup onion salad"],
+        nutrients: { calories: 380, protein: 32, carbs: 32, fat: 14 }
       },
       {
-        name: "Seafood Pasta",
-        foods: ["3oz mixed seafood (shrimp, scallops)", "1.5 cups whole wheat pasta", "1/2 cup tomato sauce", "Herbs"],
-        nutrients: { calories: 450, protein: 32, carbs: 60, fat: 8 }
+        name: "Prawn Curry with Appam",
+        foods: ["1 cup prawn curry", "2 appams", "1/4 cup coconut chutney", "1/2 cup vegetable salad"],
+        nutrients: { calories: 440, protein: 26, carbs: 52, fat: 12 }
       }
     ],
     snack: [
       {
-        name: "Trail Mix",
-        foods: ["1/4 cup mixed nuts", "2 tbsp dried fruit"],
-        nutrients: { calories: 180, protein: 6, carbs: 12, fat: 14 }
+        name: "Fish Pakora",
+        foods: ["6 pieces fish pakora", "Green chutney", "1 cup masala chai"],
+        nutrients: { calories: 260, protein: 18, carbs: 20, fat: 12 }
       },
       {
-        name: "Cottage Cheese",
-        foods: ["1/2 cup cottage cheese", "1/4 cup pineapple chunks"],
-        nutrients: { calories: 140, protein: 16, carbs: 10, fat: 2 }
+        name: "Prawn Cutlets",
+        foods: ["2 prawn cutlets", "1/4 cup tomato ketchup", "1 glass nimbu pani"],
+        nutrients: { calories: 240, protein: 16, carbs: 22, fat: 10 }
       },
       {
-        name: "Rice Cakes with Tuna",
-        foods: ["2 rice cakes", "2oz tuna salad"],
-        nutrients: { calories: 160, protein: 15, carbs: 18, fat: 3 }
+        name: "Fish Fingers",
+        foods: ["6 fish fingers", "1/4 cup mint-yogurt dip", "1 cup lemon water"],
+        nutrients: { calories: 280, protein: 22, carbs: 18, fat: 12 }
       }
     ]
   }
