@@ -1,4 +1,3 @@
-
 interface DietPlanPreferences {
   name: string;
   foodType: string;
@@ -6,6 +5,7 @@ interface DietPlanPreferences {
   mealsPerDay: string;
   currentBodyType: string;
   dreamBodyType: string;
+  budget?: string; // Adding budget as optional field
 }
 
 interface Meal {

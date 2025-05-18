@@ -24,6 +24,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { generateMealPlan } from "@/utils/dietPlanGenerator";
+import { IndianRupee } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -41,6 +42,9 @@ const formSchema = z.object({
   }),
   dreamBodyType: z.string().min(1, {
     message: "Please select your dream body type.",
+  }),
+  budget: z.string().min(1, {
+    message: "Please enter your daily budget for meals.",
   }),
 });
 
@@ -60,6 +64,7 @@ const DietPlanPage = () => {
       mealsPerDay: "",
       currentBodyType: "",
       dreamBodyType: "",
+      budget: "",
     },
   });
 
@@ -197,6 +202,30 @@ const DietPlanPage = () => {
                           <SelectItem value="6">6 meals</SelectItem>
                         </SelectContent>
                       </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="budget"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Daily Meal Budget (₹)</FormLabel>
+                      <FormControl>
+                        <div className="relative">
+                          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                            <IndianRupee size={16} />
+                          </div>
+                          <Input 
+                            type="number" 
+                            placeholder="500" 
+                            className="pl-10" 
+                            {...field}
+                          />
+                        </div>
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
