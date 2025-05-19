@@ -1,7 +1,7 @@
 {
   "name": "vite_react_shadcn_ts",
   "version": "0.0.0",
-  "homepage": "https://pushendra2020.github.io/CodeCurrent-Die/",
+  "homepage": "https://pushendra2020.github.io/Diet-planrepo/",
   "type": "module",
   "scripts": {
     "dev": "vite",

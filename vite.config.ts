@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
   ].filter(Boolean),
-  base:"/CodeCurrent-Die",
+  base:"/Diet-planrepo",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
